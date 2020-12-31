@@ -1,13 +1,11 @@
 import json
 import getpass
 
-bookmark_path = (
-    'C:/Users/akiyama/AppData/Local/Google/Chrome/User Data/Default'
-).format(username=getpass.getuser())
+bookmark_path = 'C:/Users/{username}/AppData/Local/Google/Chrome/User Data/Default/bookmarks'.format(username=getpass.getuser())
 
 
 # Get the json of user's Chrome bookmark.
-with open(bookmark_path) as f:
+with open(bookmark_path, encoding='utf-8') as f:
     bookmark_data = json.load(f)
 
 
