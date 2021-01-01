@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <title>index</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+</head>
+<div id="sec">
+    <ul>
+        {% for i in bookmark_bar %}
+      <li>
+        <span class="fa fa-code"></span>
+  
+        <p class="title01">{{i['name']}}</p>
+        <p>この部分はダミーテキスト。この部分はダミーテキスト。この部分はダミーテキスト。この部分はダミーテキスト。この部分はダミーテキスト。この部分はダミーテキスト。この部分はダミーテキスト。この部分はダミーテキスト。</p>
+      </li>
+    {% endfor %} 
+    </ul>
+    
+  </div>
