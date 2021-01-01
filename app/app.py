@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, session, url_for
 from app import key
 import json
 import getpass
+from app.summarize import summary
 
 #/mnt/cとするとwslからwindowsのファイル見れる
 bookmark_path = '/mnt/c/Users/{username}/AppData/Local/Google/Chrome/User Data/Default/bookmarks'.format(username=getpass.getuser())
@@ -17,6 +18,8 @@ def index():
     with open(bookmark_path, encoding='utf-8') as f:
         bookmark_data = json.load(f)
 
-    bookmark_bar = bookmark_data['roots']['bookmark_bar']
-    print(bookmark_bar)
-    return render_template('index.html', bookmark_bar=bookmark_bar['children'])
+    bookmark_bar = bookmark_data['roots']['bookmark_bar']['children']
+    bookmark_bar= summary(bookmark_bar)
+
+
+    return render_template('index.html', bookmark_bar=bookmark_bar)

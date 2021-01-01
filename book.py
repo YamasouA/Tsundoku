@@ -1,7 +1,8 @@
 import json
 import getpass
 
-bookmark_path = 'C:/Users/{username}/AppData/Local/Google/Chrome/User Data/Default/bookmarks'.format(username=getpass.getuser())
+#/mnt/cとするとwslからwindowsのファイル見れる
+bookmark_path = '/mnt/c/Users/{username}/AppData/Local/Google/Chrome/User Data/Default/bookmarks'.format(username=getpass.getuser())
 
 
 # Get the json of user's Chrome bookmark.

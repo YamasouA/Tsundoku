@@ -2,10 +2,6 @@
   カード型_03
 --------------------------------------*/
 @charset 'utf-8';
-#sec ul li {
-  float: left;
-  width: 50%;
-}
 
 #sec {
     padding: 0;
