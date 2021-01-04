@@ -4,17 +4,16 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
 </head>
 <body>
-  <form action="/select" method="POST" enctype="multipart/form-data">
-    <select name=list_data>
-      <option value="null" disabled selected>選択してください</option>
-      <option value="True">要約あり</option>
-      <option value="False">要約なし</option>
-    </select>
-    <div>
-      <input type="submit" value="送信">
-    </div>
-  </form>
-  
+    <form action="/select" method="POST" enctype="multipart/form-data">
+        <select name=list_data>
+          <option value="null" disabled selected>選択してください</option>
+          <option value="True">要約あり</option>
+          <option value="False">要約なし</option>
+        </select>
+        <div>
+          <input type="submit" value="送信">
+        </div>
+      </form>
   <div id="sec">
     <ul>
         {% for i in bookmark_bar %}
